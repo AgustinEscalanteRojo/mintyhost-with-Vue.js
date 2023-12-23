@@ -34,9 +34,9 @@ export default {
   <BarrioSelector />
   <button
     @click="openModal"
-    class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 min-w-40"
+    class="bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-blue-800 min-w-80 mx-auto block"
   >
-    Abrir Modal
+    Seleccionar filtros
   </button>
   <FilterModal :show="modalOpen" @close="closeModal">
     <Filters />
