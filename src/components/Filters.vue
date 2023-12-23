@@ -40,57 +40,10 @@
 </template>
 
 <script>
-// import axios from "axios";
 
-// export default {
-//   data() {
-//     return {
-//       apartments: [],
-//       error: null,
-//     };
-//   },
-//   methods: {
-//     fetchData() {
-//       const searchData = {
-//         barrio_id: 1,
-//         bedrooms: 2,
-//         guests: 3,
-//         min_price: 2999,
-//         max_price: 3000,
-//       };
-
-//       axios
-//         .post(
-//           "https://api.dev.myplazze.com/api/v1/practice/search",
-//           searchData,
-//           {
-//             headers: {
-//               Accept: "application/json",
-//               "Content-Type": "application/json",
-//             },
-//           }
-//         )
-//         .then((response) => {
-//           console.log(response.data);
-//           this.apartments = response.data;
-//         })
-//         .catch((error) => {
-//           this.error = "Error fetching data: " + error.message;
-//         });
-//     },
-//   },
-//   mounted() {
-//     this.fetchData();
-//   },
-// };
 </script>
 
 <style>
-/* .apartment-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-} */
 
 .error-message {
   color: red;

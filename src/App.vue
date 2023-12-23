@@ -41,5 +41,10 @@ export default {
   <FilterModal :show="modalOpen" @close="closeModal">
     <Filters />
   </FilterModal>
+  <button
+    class="bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-blue-800 min-w-40 mx-auto block mt-4"
+  >
+    Buscar
+  </button>
   <ListApi />
 </template>
