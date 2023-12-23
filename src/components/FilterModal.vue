@@ -4,13 +4,24 @@
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
   >
     <div class="bg-white p-4 rounded-md w-1/2">
-      <div class="mt-4 flex justify-end">
+      <div class="mt-2 flex justify-end">
         <slot></slot>
-        <button
+        <div>
+          <button
           @click="closeModal"
-          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none">
-          Cerrar
-        </button>
+            class="px-6 py-2 bg-blue-900 text-white rounded-md hover:bg-black-700 focus:outline-none"
+          >
+            Aceptar
+          </button>
+        </div>
+        <div>
+          <button
+            @click="closeModal"
+            class="px-6 py-2 bg-blue-900 text-white rounded-md hover:bg-black-700 focus:outline-none"
+          >
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
