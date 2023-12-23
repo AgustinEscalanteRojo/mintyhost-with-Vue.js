@@ -1,0 +1,57 @@
+<template>
+  <div>
+    <label
+      for="countries"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Barrio</label
+    >
+    <select
+      id="countries"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    >
+      <option selected>Selecciona un barrio</option>
+      <option v-for="barrio in barrios" :key="barrio.id">{{ barrio.name }}</option>
+    </select>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      barrios: [],
+      error: null,
+    };
+  },
+  methods: {
+    fetchData() {
+      axios
+        .get("https://api.dev.myplazze.com/api/v1/practice/barrios", {
+          header: {
+            Accept: "application/json",
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          this.barrios = response.data;
+        })
+        .catch((error) => {
+          this.error = "Error fetching data: " + error.message;
+        });
+    },
+  },
+  mounted() {
+    this.fetchData();
+  },
+};
+</script>
+
+<style>
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+</style>

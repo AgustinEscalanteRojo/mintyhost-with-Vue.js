@@ -51,6 +51,7 @@
     @change="changeLanguage"
     class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:ring focus:border-indigo-500 focus:bg-white focus:text-gray-900"
   >
+  <option selected>Idioma</option>
     <option value="es">Español</option>
     <option value="en">English</option>
   </select>

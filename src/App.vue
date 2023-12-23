@@ -1,11 +1,28 @@
 <script>
 import NavBar from "./components/NavBar.vue";
-import Filters from "./components/Filters.vue";
+import BarrioSelector from "./components/BarrioSelector.vue";
+import FilterModal from "./components/FilterModal.vue";
 import ListApi from "./components/ListApi.vue";
+import Filters from "./components/Filters.vue";
 
 export default {
+  data() {
+    return {
+      modalOpen: false,
+    };
+  },
+  methods: {
+    openModal() {
+      this.modalOpen = true;
+    },
+    closeModal() {
+      this.modalOpen = false;
+    },
+  },
   components: {
     NavBar,
+    BarrioSelector,
+    FilterModal,
     Filters,
     ListApi,
   },
@@ -14,6 +31,12 @@ export default {
 
 <template>
   <NavBar />
-  <Filters />
+  <BarrioSelector />
+  <button @click="openModal" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+      Abrir Modal
+    </button>
+  <FilterModal :show="modalOpen" @close="closeModal" > 
+    <Filters />
+  </FilterModal>
   <ListApi />
 </template>
