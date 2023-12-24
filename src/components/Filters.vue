@@ -1,9 +1,9 @@
 <template>
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4 mx-auto max-w-7x1 p-2 m-1"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto max-w-7x1 p-2 m-1"
   >
     <div>
-      <p class="flex items-center text-gray-700 text-base mt-2">
+      <p class="flex items-center text-gray-700 text-base mt-2 md:mt-0 md:text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -45,7 +45,7 @@
       />
     </div>
     <div>
-      <p class="flex items-center text-gray-700 text-base mt-2">
+      <p class="flex items-center text-gray-700 text-base mt-2 md:mt-0 md:text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
