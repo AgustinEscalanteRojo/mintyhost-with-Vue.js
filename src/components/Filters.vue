@@ -97,7 +97,7 @@
         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       />
     </div>
-    <p class="flex items-center text-gray-700 text-base mt-2">
+    <p class="flex items-center text-gray-700 md:mt-0 text-base mt-2 md:mt-0 md:text-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -115,7 +115,7 @@
 
       Precio
     </p>
-    <div class="relative mb-2">
+    <div class="relative mb-2 md:justify-center">
       <label for="labels-range-input" class="sr-only">Labels range</label>
       <input
         id="labels-range-input"

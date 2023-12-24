@@ -17,7 +17,7 @@
         >
           <div class="flex flex-shrink-0 items-center">
             <img
-              class="h-8 w-auto"
+            class="h-5 w-auto sm:h-8 md:h-10 lg:h-18 xl:h-10"
               src="https://www.mintyhost.com/wp-content/uploads/2023/06/mintyhost-logotipo.svg"
               alt="Your Company"
             />
@@ -30,8 +30,8 @@
                 :href="item.href"
                 :class="[
                   item.current
-                    ? 'text-gray-300 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    ? 'text-white hover:bg-gray-400'
+                    : 'text-white hover:bg-gray-400 hover:text-white',
                   'rounded-md px-3 py-2 text-sm font-medium',
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
@@ -44,12 +44,12 @@
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
           <div
-            class="ml-4 relative text-sm font-medium text-gray-900 dark:text-white"
+            class="ml-4 relative text-xs font-medium text-gray-900 dark:text-white"
           >
-          <select
+            <select
               v-model="selectedLanguage"
               @change="changeLanguage"
-              class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:ring focus:border-indigo-500 focus:bg-white focus:text-gray-900"
+              class="block appearance-none w-18 sm:w-18 md:w-40 lg:w-46 bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:ring focus:border-indigo-300 focus:bg-white focus:text-gray-900"
             >
               <option value="es">Español</option>
               <option value="en">English</option>
