@@ -1,28 +1,60 @@
 <template>
   <div>
-    <div v-if="error" class="error-message bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4">
+    <div
+      v-if="error"
+      class="error-message bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4"
+    >
       {{ error }}
     </div>
 
-    <div v-if="apartments.length > 0" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1 mx-auto max-w-7xl p-4 m-4">
-      <div v-for="apartment in apartments" :key="apartment.id" class="bg-white overflow-hidden shadow-md rounded-md p-4">
-        <img class="w-full h-32 object-cover max-h-50 mb-4 rounded-md" :src="apartment.pic[1]" alt="Apartment">
-        <h2 class="text-gray-900 font-bold text-xl mb-2">{{ apartment.barrio.name }}</h2>
-        <p class="text-gray-700 text-base">{{ apartment.apartment_title }}</p>
-        <p class="text-gray-700 text-base mt-2">Bedrooms: {{ apartment.bedrooms }}</p>
-        <p class="text-gray-700 text-base mt-2">Bathrooms: {{ apartment.bathrooms }}</p>
-        <p class="text-gray-700 text-base mt-2">Bedrooms: {{ apartment.town }}</p>
-        <p class="text-gray-700 text-base mt-2">Amenities: {{ apartment.amenities }}</p>
-        <p class="text-gray-700 text-base mt-2">Monthly Price: {{ apartment.monthly_price }}</p>
+    <div
+      v-if="apartments.length > 0"
+      class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-1 mx-auto max-w-7xl p-4 m-4"
+    >
+      <div
+        v-for="apartment in apartments"
+        :key="apartment.id"
+        class="bg-white overflow-hidden shadow-md rounded-md p-4"
+      >
+        <img
+          class="w-full h-32 object-cover max-h-50 mb-4 rounded-md"
+          :src="apartment.pic[1]"
+          alt="Apartment"
+        />
 
+        <!-- <img
+          class="w-full h-32 object-cover max-h-50 mb-4 rounded-md"
+          v-for="imagen in apartment.pic"
+          :src="imagen"
+          alt="Apartment"
+        /> -->
+
+        <h2 class="text-gray-900 font-bold text-xl mb-2">
+          {{ apartment.barrio.name }}
+        </h2>
+        <p class="text-gray-700 text-base">{{ apartment.apartment_title }}</p>
+        <p class="text-gray-700 text-base mt-2">
+          Habitaciones: {{ apartment.bedrooms }}
+        </p>
+        <p class="text-gray-700 text-base mt-2">
+          Baños: {{ apartment.bathrooms }}
+        </p>
+        <p class="text-gray-700 text-base mt-2">
+          Ciudad: {{ apartment.town }}
+        </p>
+        <p class="text-gray-700 text-base mt-2">
+          Servicios: {{ apartment.amenities }}
+        </p> 
+        <p class="text-gray-700 text-base mt-2">
+          Precio: {{ apartment.monthly_price }}
+        </p>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
@@ -41,19 +73,20 @@ export default {
         max_price: 3000,
       };
 
-      axios.post('https://api.dev.myplazze.com/api/v1/practice/search', searchData, {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-      })
-      .then(response => {
-        console.log(response.data)
-        this.apartments = response.data;
-      })
-      .catch(error => {
-        this.error = 'Error fetching data: ' + error.message;
-      });
+      axios
+        .post("https://api.dev.myplazze.com/api/v1/practice/search", {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          this.apartments = response.data;
+        })
+        .catch((error) => {
+          this.error = "Error fetching data: " + error.message;
+        });
     },
   },
   mounted() {

@@ -43,13 +43,14 @@
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <div class="ml-4 relative">
-            <select
+          <div
+            class="ml-4 relative text-sm font-medium text-gray-900 dark:text-white"
+          >
+          <select
               v-model="selectedLanguage"
               @change="changeLanguage"
               class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:ring focus:border-indigo-500 focus:bg-white focus:text-gray-900"
             >
-              <option selected>Idioma</option>
               <option value="es">Español</option>
               <option value="en">English</option>
             </select>
@@ -114,7 +115,7 @@ import {
   Menu,
   MenuItems,
 } from "@headlessui/vue";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = [
   { name: "Viviendas", href: "#", current: true },
