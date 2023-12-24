@@ -22,13 +22,6 @@
           alt="Apartment"
         />
 
-        <!-- <img
-          class="w-full h-32 object-cover max-h-50 mb-4 rounded-md"
-          v-for="imagen in apartment.pic"
-          :src="imagen"
-          alt="Apartment"
-        /> -->
-
         <h2 class="text-gray-900 font-bold text-xl mb-2">
           {{ apartment.barrio.name }}
         </h2>
@@ -40,7 +33,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 fill-yellow-500"
           >
             <path
               stroke-linecap="round"
@@ -49,7 +42,7 @@
             />
           </svg>
 
-          Habitaciones: {{ apartment.bedrooms }}
+          <strong>Habitaciones</strong> : {{ apartment.bedrooms }}
         </p>
         <p class="flex items-center text-gray-700 text-base mt-2">
           <svg
@@ -58,7 +51,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 fill-yellow-500"
           >
             <path
               stroke-linecap="round"
@@ -67,7 +60,7 @@
             />
           </svg>
 
-          Baños: {{ apartment.bathrooms }}
+          <strong>Baños</strong> : {{ apartment.bathrooms }}
         </p>
         <p class="flex items-center text-gray-700 text-base mt-2">
           <svg
@@ -76,7 +69,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 fill-yellow-500"
           >
             <path
               stroke-linecap="round"
@@ -85,7 +78,7 @@
             />
           </svg>
 
-          Ciudad: {{ apartment.town }}
+          <strong>Ciudad</strong> : {{ apartment.town }}
         </p>
         <p class="flex items-center text-gray-700 text-base mt-2">
           <svg
@@ -94,7 +87,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 fill-yellow-500"
           >
             <path
               stroke-linecap="round"
@@ -103,7 +96,7 @@
             />
           </svg>
 
-          Servicios: {{ apartment.amenities }}
+          <strong>Servicios</strong> : {{ apartment.amenities }}
         </p>
         <p class="flex items-center text-gray-700 text-base mt-2">
           <svg
@@ -112,7 +105,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 fill-yellow-500"
           >
             <path
               stroke-linecap="round"
@@ -121,7 +114,7 @@
             />
           </svg>
 
-          Precio: {{ apartment.monthly_price }}
+          <strong>Precio</strong> : {{ apartment.monthly_price }}
         </p>
       </div>
     </div>
@@ -174,7 +167,7 @@ export default {
 .apartment-card {
   border: 1px solid #ddd;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .error-message {

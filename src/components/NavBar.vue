@@ -41,7 +41,7 @@
           </div>
         </div>
         <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          class="absolute inset-y-0 right-0 left-50 flex items-center pr-2 sm:static sm:inset-auto sm:ml-2 sm:pr-0"
         >
           <div
             class="ml-4 relative text-xs font-medium text-gray-900 dark:text-white"

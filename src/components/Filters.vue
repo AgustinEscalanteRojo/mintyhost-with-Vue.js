@@ -10,7 +10,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="w-6 h-6 fill-yellow-500"
         >
           <path
             stroke-linecap="round"
@@ -19,7 +19,7 @@
           />
         </svg>
 
-        Habitaciones
+     <strong>  Habitaciones</strong> 
       </p>
       <label
         for="bedroom-1"
@@ -52,7 +52,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="w-6 h-6 fill-yellow-500"
         >
           <path
             stroke-linecap="round"
@@ -61,7 +61,7 @@
           />
         </svg>
 
-        Huéspedes
+       <strong> Huéspedes</strong>
       </p>
       <label
         for="guest-2"
@@ -104,7 +104,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-6 h-6"
+        class="w-6 h-6 fill-yellow-500"
       >
         <path
           stroke-linecap="round"
@@ -113,7 +113,7 @@
         />
       </svg>
 
-      Precio
+    <strong> Precio</strong>
     </p>
     <div class="relative mb-2 md:justify-center">
       <label for="labels-range-input" class="sr-only">Labels range</label>

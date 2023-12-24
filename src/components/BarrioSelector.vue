@@ -5,7 +5,7 @@
     <label
       for="barrio"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >Barrios</label
+      ><strong>Barrio</strong></label
     >
     <select
       id="barrio"
